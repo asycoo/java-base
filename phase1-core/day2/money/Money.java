@@ -58,8 +58,7 @@ public class Money {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Money money = (Money) o;
-        return this.currency.equals(money.currency) && this.amount.equals(money.amount);
-        // throw new UnsupportedOperationException("TODO: 实现 equals");
+        return this.currency.compareTo(money.currency) == 0 && this.amount.compareTo(money.amount) == 0;
     }
 
     @Override
