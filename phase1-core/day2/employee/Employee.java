@@ -1,3 +1,5 @@
+package day2.employee;
+
 /**
  * 实操 2.2 - 抽象员工基类
  *

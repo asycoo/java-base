@@ -1,3 +1,5 @@
+package day2.employee;
+
 /**
  * 时薪员工
  */

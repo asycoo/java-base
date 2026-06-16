@@ -1,3 +1,5 @@
+package day2.money;
+
 import java.math.BigDecimal;
 import java.util.Objects;
 

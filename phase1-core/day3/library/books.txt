@@ -1,0 +1,4 @@
+id,title,author,price,available
+B001,Java核心技术,Horstmann,128.0,true
+B002,Effective Java,Bloch,89.0,true
+B003,深入理解Java虚拟机,周志明,99.0,true

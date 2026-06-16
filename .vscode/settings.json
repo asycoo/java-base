@@ -1,0 +1,5 @@
+{
+  "java.project.sourcePaths": ["phase1-core"],
+  "java.project.outputPath": "phase1-core/bin",
+  "java.debug.settings.cwd": "${workspaceFolder}/phase1-core"
+}

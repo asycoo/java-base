@@ -1,4 +1,4 @@
-package day2.library;
+package day3.library;
 
 /**
  * 图书系统业务异常

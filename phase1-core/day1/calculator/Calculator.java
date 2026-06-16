@@ -1,3 +1,5 @@
+package day1.calculator;
+
 /**
  * 实操 1.2 - 简易计算器
  *

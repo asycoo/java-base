@@ -1,3 +1,5 @@
+package day2.library;
+
 /**
  * 图书
  */

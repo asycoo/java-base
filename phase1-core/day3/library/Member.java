@@ -1,4 +1,4 @@
-package day2.library;
+package day3.library;
 
 /**
  * 会员

@@ -1,3 +1,5 @@
+package day1.warmup;
+
 /**
  * 实操 1.1 - 反转字符串
  *

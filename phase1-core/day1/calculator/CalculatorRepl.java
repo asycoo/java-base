@@ -1,3 +1,5 @@
+package day1.calculator;
+
 import java.util.Scanner;
 
 /**

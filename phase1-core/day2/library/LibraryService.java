@@ -1,3 +1,5 @@
+package day2.library;
+
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.HashMap;

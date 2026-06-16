@@ -1,3 +1,5 @@
+package day1.warmup;
+
 /**
  * 实操 1.1 - 判断回文字符串
  *

@@ -1,4 +1,4 @@
-package day2.library;
+package day3.library;
 
 import java.time.LocalDate;
 
@@ -30,11 +30,6 @@ public class LoanRecord {
         this.returnDate = returnDate;
     }
 
-    public boolean isReturned() {
-        return returnDate != null;
-    }
-
-    /** 逾期天数，未逾期返回 0 */
     public long overdueDays(LocalDate returnDay) {
         if (!returnDay.isAfter(dueDate)) {
             return 0;

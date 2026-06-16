@@ -1,3 +1,5 @@
+package day2.employee;
+
 /**
  * 固定月薪员工
  */

@@ -1,3 +1,5 @@
+package day1.warmup;
+
 /**
  * 实操 1.1 - 找出 int 数组中第二大的数
  *
