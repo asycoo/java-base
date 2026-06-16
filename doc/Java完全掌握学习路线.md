@@ -566,7 +566,8 @@ PaymentFactory  创建实例
 
 ### 阶段一（Day 1–3）
 
-- **Day 1 已开始**（2026-06-16）：代码骨架在 `phase1-core/day1/` 
+- **Day 1 已完成**（2026-06-16）：warmup + calculator
+- **Day 2 已开始**：OOP — `phase1-core/day2/` 
 
 ### 阶段二（Week 2）
 
