@@ -1,5 +1,6 @@
 {
-  "java.project.sourcePaths": ["phase1-core"],
-  "java.project.outputPath": "phase1-core/bin",
-  "java.debug.settings.cwd": "${workspaceFolder}/phase1-core"
+  "java.configuration.updateBuildConfiguration": "automatic",
+  "java.import.maven.enabled": true,
+  "java.import.gradle.enabled": false,
+  "java.debug.settings.cwd": "${workspaceFolder}"
 }

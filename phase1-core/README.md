@@ -4,7 +4,9 @@
 |----|------|------|
 | Day 1 | [day1/](day1/) | 已完成 |
 | Day 2 | [day2/](day2/) | 已完成 |
-| Day 3 | [day3/](day3/) | 进行中 |
+| Day 3 | [day3/](day3/) | 已完成 |
+
+阶段二 → [../phase2-collections/](../phase2-collections/)（进行中）
 
 ## 如何运行
 
@@ -26,4 +28,8 @@ javac -d bin day1/warmup/*.java && java -cp bin day1.warmup.ReverseString
 javac -d bin day1/calculator/*.java && java -cp bin day1.calculator.Calculator
 javac -d bin day2/library/*.java && java -cp bin day2.library.LibraryMain
 javac -d bin day3/library/*.java && java -cp bin day3.library.LibraryMain
+
+# 阶段二
+mvn compile
+java -cp target/classes phase2.arraylist.SimpleArrayListTest
 ```

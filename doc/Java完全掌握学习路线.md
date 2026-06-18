@@ -568,7 +568,8 @@ PaymentFactory  创建实例
 
 - **Day 1 已完成**（2026-06-16）：warmup + calculator
 - **Day 2 已完成**：OOP — `phase1-core/day2/`
-- **Day 3 已开始**：集合 + 持久化 — `phase1-core/day3/` 
+- **Day 3 已完成**：集合 + 持久化 — `phase1-core/day3/`
+- **阶段二已开始**（Week 2）：泛型 + Stream — `phase2-collections/` 
 
 ### 阶段二（Week 2）
 
