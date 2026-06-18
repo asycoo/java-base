@@ -33,6 +33,7 @@
                             <sources>
                                 <source>phase1-core</source>
                                 <source>phase2-collections</source>
+                                <source>phase3-concurrency</source>
                             </sources>
                         </configuration>
                     </execution>

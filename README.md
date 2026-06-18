@@ -1,6 +1,6 @@
 # java-base
 
-Java 学习练习仓库（阶段一 + 阶段二）。
+Java 学习练习仓库（阶段一～三）。
 
 ## IDE 配置（VS Code / Cursor）
 
@@ -9,7 +9,7 @@ Java 学习练习仓库（阶段一 + 阶段二）。
 3. 首次打开等待 Maven 导入（右下角 ☕ Building workspace）
 4. 若仍提示 `non-project file`：`Cmd+Shift+P` → **Java: Clean Java Language Server Workspace** → Reload
 
-项目已配置 **Maven**（`pom.xml`），IDE 会自动识别 `phase1-core` 与 `phase2-collections` 下所有 Java 文件。
+项目已配置 **Maven**（`pom.xml`），IDE 会自动识别各 `phase*` 目录下的 Java 文件。
 
 ## 编译 & 运行
 
@@ -35,3 +35,4 @@ java -cp target/classes phase2.stream.WordFrequencyStream
 | [doc/](doc/) | 学习路线 |
 | [phase1-core/](phase1-core/) | 阶段一 Day 1–3 |
 | [phase2-collections/](phase2-collections/) | 阶段二 泛型 / Stream / ArrayList |
+| [phase3-concurrency/](phase3-concurrency/) | 阶段三 多线程 / JVM（进行中） |
