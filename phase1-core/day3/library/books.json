@@ -1,0 +1,19 @@
+[ {
+  "id" : "B001",
+  "title" : "Java核心技术",
+  "author" : "Horstmann",
+  "price" : 128.0,
+  "available" : true
+}, {
+  "id" : "B002",
+  "title" : "Effective Java",
+  "author" : "Bloch",
+  "price" : 89.0,
+  "available" : true
+}, {
+  "id" : "B003",
+  "title" : "深入理解Java虚拟机",
+  "author" : "周志明",
+  "price" : 99.0,
+  "available" : true
+} ]

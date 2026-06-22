@@ -2,5 +2,11 @@
   "java.configuration.updateBuildConfiguration": "automatic",
   "java.import.maven.enabled": true,
   "java.import.gradle.enabled": false,
-  "java.debug.settings.cwd": "${workspaceFolder}"
+  "java.debug.settings.cwd": "${workspaceFolder}",
+  "java.project.sourcePaths": [
+    "phase1-core",
+    "phase2-collections",
+    "phase3-concurrency",
+    "phase4-io"
+  ]
 }

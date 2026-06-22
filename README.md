@@ -1,6 +1,6 @@
 # java-base
 
-Java 学习练习仓库（阶段一～三）。
+Java 学习练习仓库（阶段一～四）。
 
 ## IDE 配置（VS Code / Cursor）
 
@@ -35,4 +35,5 @@ java -cp target/classes phase2.stream.WordFrequencyStream
 | [doc/](doc/) | 学习路线 |
 | [phase1-core/](phase1-core/) | 阶段一 Day 1–3 |
 | [phase2-collections/](phase2-collections/) | 阶段二 泛型 / Stream / ArrayList |
-| [phase3-concurrency/](phase3-concurrency/) | 阶段三 多线程 / JVM（进行中） |
+| [phase3-concurrency/](phase3-concurrency/) | 阶段三 多线程 / JVM |
+| [phase4-io/](phase4-io/) | 阶段四 IO/NIO / 异常 / JSON（进行中） |

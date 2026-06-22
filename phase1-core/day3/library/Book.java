@@ -1,7 +1,10 @@
 package day3.library;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 /**
- * 图书 — 支持 CSV 序列化
+ * 图书 — 支持 JSON 持久化（v3）
  */
 public class Book {
 
@@ -15,7 +18,13 @@ public class Book {
         this(id, title, author, price, true);
     }
 
-    public Book(String id, String title, String author, double price, boolean available) {
+    @JsonCreator
+    public Book(
+            @JsonProperty("id") String id,
+            @JsonProperty("title") String title,
+            @JsonProperty("author") String author,
+            @JsonProperty("price") double price,
+            @JsonProperty("available") boolean available) {
         this.id = id;
         this.title = title;
         this.author = author;
@@ -33,13 +42,13 @@ public class Book {
         this.available = available;
     }
 
-    /** CSV 一行，不含表头 */
+    /** CSV 一行，不含表头（v2 遗留，便于对比） */
     public String toCsvLine() {
         return String.join(",",
                 id, title, author, String.valueOf(price), String.valueOf(available));
     }
 
-    /** 解析 CSV 一行，如 B001,Java核心技术,Horstmann,128.0,true */
+    /** 解析 CSV 一行 */
     public static Book fromCsvLine(String line) {
         String[] parts = line.split(",", 5);
         if (parts.length != 5) {

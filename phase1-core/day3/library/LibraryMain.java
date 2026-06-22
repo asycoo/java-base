@@ -4,36 +4,30 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
 import java.util.Scanner;
+import phase4.exception.BusinessException;
+import phase4.exception.InfrastructureException;
+import phase4.exception.ValidationException;
 
 /**
- * 图书管理系统 v2 - 控制台入口
+ * 图书管理系统 v3 - 控制台入口
  *
- * 菜单：
- *   1. 列出图书（按价格排序）
- *   2. 按作者搜索
- *   3. 添加图书
- *   4. 借书
- *   5. 还书
- *   6. 查看在借记录
- *   0. 退出（自动保存）
+ * JSON 持久化 + 统一异常处理
  */
 public class LibraryMain {
 
-    /** 自动定位 books.txt（兼容从 java-base 或 phase1-core 目录运行） */
     private static final Path BOOKS_FILE = locateBooksFile();
 
     static Path locateBooksFile() {
         Path[] candidates = {
-                Path.of("day3/library/books.txt"),
-                Path.of("phase1-core/day3/library/books.txt")
+                Path.of("day3/library/books.json"),
+                Path.of("phase1-core/day3/library/books.json")
         };
         for (Path path : candidates) {
             if (Files.exists(path)) {
                 return path;
             }
         }
-        // 默认写入源码目录（phase1-core 下运行时）
-        return Path.of("day3/library/books.txt");
+        return Path.of("day3/library/books.json");
     }
 
     public static void main(String[] args) {
@@ -44,7 +38,7 @@ public class LibraryMain {
         library.registerMember(new Member("M002", "李四"));
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("=== 图书管理系统 v2（持久化） ===");
+        System.out.println("=== 图书管理系统 v3（JSON + 统一异常） ===");
 
         while (true) {
             printMenu();
@@ -67,10 +61,14 @@ public class LibraryMain {
                     }
                     default -> System.out.println("无效选项");
                 }
-            } catch (LibraryException e) {
-                System.out.println("操作失败：" + e.getMessage());
-            } catch (Exception e) {
-                System.out.println("系统错误：" + e.getMessage());
+            } catch (ValidationException e) {
+                System.out.println("参数错误：" + e.getMessage());
+            } catch (BusinessException e) {
+                System.out.printf("[%s] %s%n", e.getErrorCode(), e.getMessage());
+            } catch (InfrastructureException e) {
+                System.out.printf("系统错误 [%s]: %s%n", e.getErrorCode(), e.getMessage());
+            } catch (NumberFormatException e) {
+                System.out.println("参数错误：请输入合法数字");
             }
         }
     }
@@ -113,7 +111,7 @@ public class LibraryMain {
         System.out.print("价格: ");
         double price = Double.parseDouble(scanner.nextLine().trim());
         if (title.isEmpty() || author.isEmpty()) {
-            throw new LibraryException("书名和作者不能为空");
+            throw new ValidationException("书名和作者不能为空");
         }
         library.addBook(new Book(id, title, author, price));
         library.saveBooks();
