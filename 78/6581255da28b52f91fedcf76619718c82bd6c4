@@ -1,0 +1,34 @@
+phase6-springboot/src/main/java/com/asycoo/library/dto/ApiResponse.java
+  s_5e3b9530195b02::t_65cc542cc901fc 1-17
+phase6-springboot/src/main/java/com/asycoo/library/dto/BookCreateRequest.java
+  s_5e3b9530195b02::t_41817d10898d74 1-7
+phase6-springboot/src/main/java/com/asycoo/library/service/BookService.java
+  s_5e3b9530195b02::t_1004f942bbcdce 1-45
+phase6-springboot/src/main/java/com/asycoo/library/model/Book.java
+  s_5e3b9530195b02::t_efc34493b79bb3 1-7
+phase6-springboot/src/test/java/com/asycoo/library/BookControllerTest.java
+  s_5e3b9530195b02::t_7624e03accf699 1-41
+phase6-springboot/README.md
+  s_5e3b9530195b02::t_ace52a36ba1593 119,121
+  s_5e3b9530195b02::t_762cac70dd3a5b 49-90
+phase6-springboot/src/main/java/com/asycoo/library/repository/BookRepository.java
+  s_5e3b9530195b02::t_a762051f05de4f 1-42
+phase6-springboot/src/main/java/com/asycoo/library/controller/BookController.java
+  s_5e3b9530195b02::t_5cd0cfc12731ad 1-57
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.13",
+  "base_commit_sha": "786581255da28b52f91fedcf76619718c82bd6c4",
+  "prompts": {},
+  "sessions": {
+    "s_5e3b9530195b02": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "58117788-224d-4cf1-9a9a-22c148ccaa9b",
+        "model": "default"
+      },
+      "human_author": "南辰 <yujiangnan@cai-inc.com>"
+    }
+  }
+}
