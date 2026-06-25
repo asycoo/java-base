@@ -46,11 +46,48 @@ mvn spring-boot:run
 
 ### Day 2–3：REST CRUD + 分层
 
-| 顺序 | 内容 |
-| --- | --- |
-| 4 | `BookController` — 图书 CRUD |
-| 5 | `BookService` + `BookRepository` — 三层架构 |
-| 6 | 统一响应 `{ code, message, data }` |
+| 顺序 | 文件 | 任务 |
+| --- | --- | --- |
+| 4 | [BookController.java](src/main/java/com/asycoo/library/controller/BookController.java) | 图书 CRUD API |
+| 5 | [BookService.java](src/main/java/com/asycoo/library/service/BookService.java) | 业务层 |
+| 6 | [BookRepository.java](src/main/java/com/asycoo/library/repository/BookRepository.java) | 数据层（内存） |
+| 7 | [ApiResponse.java](src/main/java/com/asycoo/library/dto/ApiResponse.java) | 统一响应格式 |
+
+**三层架构：**
+
+```
+HTTP 请求
+   ↓
+Controller  (@RestController)  接收请求、返回 JSON
+   ↓
+Service     (@Service)         业务逻辑
+   ↓
+Repository  (@Repository)      存取数据
+```
+
+**手动测试（先 `mvn spring-boot:run`）：**
+
+```bash
+# 列表
+curl http://localhost:8080/api/books
+
+# 详情
+curl http://localhost:8080/api/books/B001
+
+# 新增
+curl -X POST http://localhost:8080/api/books \
+  -H 'Content-Type: application/json' \
+  -d '{"id":"B100","title":"Spring实战","author":"Craig","price":99}'
+
+# 删除
+curl -X DELETE http://localhost:8080/api/books/B100
+```
+
+**响应格式：**
+
+```json
+{ "code": 0, "message": "ok", "data": [ ... ] }
+```
 
 ### Day 4–5：校验 + 全局异常
 
@@ -79,9 +116,9 @@ mvn -f phase6-springboot/pom.xml spring-boot:run
 
 ## 验收标准
 
-- [ ] 能独立启动 Spring Boot，访问 `/api/hello`
+- [x] 能独立启动 Spring Boot，访问 `/api/hello`
 - [ ] 能解释 `@RestController` vs 普通 `@Controller`
-- [ ] 能解释 `@Autowired` / IoC 是什么
+- [ ] 能解释 `@Autowired` / IoC 是什么（看 BookController 构造器注入）
 - [ ] 图书借阅 REST API 可本地跑通
 - [ ] 能用 MockMvc 测一个 API
 
