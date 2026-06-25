@@ -4,5 +4,10 @@
 *.iml
 out/
 target/
+lib/
 phase1-core/bin/
 bin/
+.classpath
+.project
+.settings/
+.factorypath

@@ -1,0 +1,16 @@
+[ {
+  "id" : "P001",
+  "name" : "机械键盘",
+  "price" : 399.0,
+  "stock" : 10
+}, {
+  "id" : "P003",
+  "name" : "USB-C Hub",
+  "price" : 129.0,
+  "stock" : 15
+}, {
+  "id" : "P002",
+  "name" : "无线鼠标",
+  "price" : 89.0,
+  "stock" : 30
+} ]

@@ -1,6 +1,6 @@
 # java-base
 
-Java 学习练习仓库（阶段一～四）。
+Java 学习练习仓库（阶段一～五）。
 
 ## IDE 配置（VS Code / Cursor）
 
@@ -16,6 +16,9 @@ Java 学习练习仓库（阶段一～四）。
 ```bash
 # 编译整个项目
 mvn compile
+
+# 跑单元测试（阶段五）
+mvn test
 
 # 运行示例（main 类）
 mvn -q exec:java -Dexec.mainClass=phase2.stream.WordFrequencyStream
@@ -36,4 +39,6 @@ java -cp target/classes phase2.stream.WordFrequencyStream
 | [phase1-core/](phase1-core/) | 阶段一 Day 1–3 |
 | [phase2-collections/](phase2-collections/) | 阶段二 泛型 / Stream / ArrayList |
 | [phase3-concurrency/](phase3-concurrency/) | 阶段三 多线程 / JVM |
-| [phase4-io/](phase4-io/) | 阶段四 IO/NIO / 异常 / JSON（进行中） |
+| [phase4-io/](phase4-io/) | 阶段四 IO/NIO / 异常 / JSON |
+| [phase5-engineering/](phase5-engineering/) | 阶段五 设计模式（payment） |
+| [phase5-test/](phase5-test/) | 阶段五 JUnit / Mockito 测试 |

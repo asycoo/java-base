@@ -1,6 +1,6 @@
 # 阶段四：IO/NIO + 异常体系（Week 4）
 
-> 阶段三已完成 ✓ 进入后端必备：文件 IO、NIO 概念、JSON 持久化、异常设计。
+> 阶段三已完成 ✓ 阶段四已完成 ✓ 详见 [阶段五](../phase5-engineering/README.md)。
 
 ## 目标
 

@@ -571,7 +571,8 @@ PaymentFactory  创建实例
 - **Day 3 已完成**：集合 + 持久化 — `phase1-core/day3/`
 - **阶段二已完成**：泛型 + Stream — `phase2-collections/`
 - **阶段三已完成**（Week 3）：多线程 + JVM — `phase3-concurrency/`
-- **阶段四已开始**（Week 4）：IO/NIO + 异常 — `phase4-io/`
+- **阶段四已完成**（Week 4）：IO/NIO + 异常 — `phase4-io/`
+- **阶段五已开始**（Week 5）：JUnit + Mockito + 设计模式 — `phase5-engineering/`
 
 ### 阶段二（Week 2）
 
