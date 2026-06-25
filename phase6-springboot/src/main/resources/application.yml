@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: library-api
+
+logging:
+  level:
+    com.asycoo.library: INFO

@@ -1,6 +1,6 @@
 # java-base
 
-Java 学习练习仓库（阶段一～五）。
+Java 学习练习仓库（阶段一～六）。
 
 ## IDE 配置（VS Code / Cursor）
 
@@ -42,3 +42,4 @@ java -cp target/classes phase2.stream.WordFrequencyStream
 | [phase4-io/](phase4-io/) | 阶段四 IO/NIO / 异常 / JSON |
 | [phase5-engineering/](phase5-engineering/) | 阶段五 设计模式（payment） |
 | [phase5-test/](phase5-test/) | 阶段五 JUnit / Mockito 测试 |
+| [phase6-springboot/](phase6-springboot/) | 阶段六 Spring Boot REST API（进行中） |
