@@ -1,0 +1,63 @@
+phase6-springboot/README.md
+  s_5e3b9530195b02::t_449d144e8e5a77 126-160
+  s_5e3b9530195b02::t_5b0319212a0daa 178
+phase6-springboot/src/main/java/com/asycoo/library/controller/LoanController.java
+  s_5e3b9530195b02::t_a21f02a7a046c6 1-50
+phase6-springboot/src/test/java/com/asycoo/library/BookControllerTest.java
+  s_5e3b9530195b02::t_4849b4597584de 18
+  s_5e3b9530195b02::t_18b5bdfd47bbb4 9
+phase6-springboot/src/main/java/com/asycoo/library/repository/LoanRepository.java
+  s_5e3b9530195b02::t_70c1f4bb408cac 3-5,8-12
+  s_5e3b9530195b02::t_e92ad45491c329 1-2,6-7,13
+phase6-springboot/pom.xml
+  s_5e3b9530195b02::t_45b097f4a59b3d 29,42
+  s_5e3b9530195b02::t_c3248eb6ef0435 31-37,43-46
+phase6-springboot/src/main/java/com/asycoo/library/dto/ReturnResponse.java
+  s_5e3b9530195b02::t_b1a76e92a4add9 1,3-5
+phase6-springboot/src/main/java/com/asycoo/library/entity/Book.java
+  s_5e3b9530195b02::t_e21884cebab348 1-52
+phase6-springboot/src/main/java/com/asycoo/library/entity/Member.java
+  s_5e3b9530195b02::t_ff9f6254383892 1-5,9-30
+  s_5e3b9530195b02::t_fff2747c3c4c3c 6-8
+phase6-springboot/src/main/java/com/asycoo/library/repository/BookRepository.java
+  s_5e3b9530195b02::t_fd266d374ff44f 3-4,6
+phase6-springboot/src/main/java/com/asycoo/library/entity/Loan.java
+  s_5e3b9530195b02::t_2d1371dea4824c 1-67
+phase6-springboot/src/main/java/com/asycoo/library/dto/LoanRequest.java
+  s_5e3b9530195b02::t_904d7beb2a0c7a 1-8
+phase6-springboot/src/main/resources/data.sql
+  s_5e3b9530195b02::t_b37a673e64b5d1 1-8
+phase6-springboot/src/main/java/com/asycoo/library/service/BookService.java
+  s_5e3b9530195b02::t_1c42f91e24c9ef 4,32,36,40,43
+phase6-springboot/src/main/java/com/asycoo/library/controller/BookController.java
+  s_5e3b9530195b02::t_b7cd6aa3d1967d 5
+phase6-springboot/src/main/java/com/asycoo/library/service/LoanService.java
+  s_5e3b9530195b02::t_e389f8dfd329f6 1-80
+phase6-springboot/src/test/java/com/asycoo/library/LoanControllerTest.java
+  s_5e3b9530195b02::t_80b01a4b33b016 1-8,10-17,19-83
+  s_5e3b9530195b02::t_d28795336b36c1 9
+  s_5e3b9530195b02::t_d1e300ca0e5a72 18
+phase6-springboot/src/main/java/com/asycoo/library/repository/MemberRepository.java
+  s_5e3b9530195b02::t_8b688970fbc673 1-7
+phase6-springboot/src/main/java/com/asycoo/library/exception/GlobalExceptionHandler.java
+  s_5e3b9530195b02::t_2c580d44607250 21,23
+  s_5e3b9530195b02::t_d07eb542d764a9 64-66
+phase6-springboot/src/main/resources/application.yml
+  s_5e3b9530195b02::t_5290fbe10fef79 7-25
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.13",
+  "base_commit_sha": "e16e8c396e61869ec7ad284f9059c87db99edece",
+  "prompts": {},
+  "sessions": {
+    "s_5e3b9530195b02": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "58117788-224d-4cf1-9a9a-22c148ccaa9b",
+        "model": "default"
+      },
+      "human_author": "南辰 <yujiangnan@cai-inc.com>"
+    }
+  }
+}
