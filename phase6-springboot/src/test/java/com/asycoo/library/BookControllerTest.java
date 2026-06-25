@@ -38,4 +38,24 @@ class BookControllerTest {
                 .andExpect(status().isCreated())
                 .andExpect(jsonPath("$.data.id").value("B100"));
     }
+
+    @Test
+    void createBook_缺少title_应返回400() throws Exception {
+        String body = """
+                {"id":"B101","author":"Craig","price":99.0}
+                """;
+        mockMvc.perform(post("/api/books")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(body))
+                .andExpect(status().isBadRequest())
+                .andExpect(jsonPath("$.code").value(4001));
+    }
+
+    @Test
+    void getBook_不存在_应返回404() throws Exception {
+        mockMvc.perform(get("/api/books/NOT_EXIST"))
+                .andExpect(status().isNotFound())
+                .andExpect(jsonPath("$.code").value(4041))
+                .andExpect(jsonPath("$.message").value("图书不存在: NOT_EXIST"));
+    }
 }

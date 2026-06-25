@@ -91,10 +91,35 @@ curl -X DELETE http://localhost:8080/api/books/B100
 
 ### Day 4–5：校验 + 全局异常
 
-| 顺序 | 内容 |
-| --- | --- |
-| 7 | `@Valid` + `@NotBlank` 参数校验 |
-| 8 | `@ControllerAdvice` — 复用 phase4 异常体系 |
+| 顺序 | 文件 | 任务 |
+| --- | --- | --- |
+| 8 | [BookCreateRequest.java](src/main/java/com/asycoo/library/dto/BookCreateRequest.java) | `@NotBlank` / `@Positive` |
+| 9 | [GlobalExceptionHandler.java](src/main/java/com/asycoo/library/exception/GlobalExceptionHandler.java) | `@RestControllerAdvice` 统一异常 |
+| 10 | `exception/` 包 | 复用 phase4 异常体系 |
+
+**校验测试：**
+
+```bash
+# 缺少 title → HTTP 400, code 4001
+curl -X POST http://localhost:8080/api/books \
+  -H 'Content-Type: application/json' \
+  -d '{"id":"B200","author":"Craig","price":99}'
+
+# 查不存在的书 → HTTP 404, code 4041
+curl http://localhost:8080/api/books/NOT_EXIST
+```
+
+**异常流转：**
+
+```
+Service 抛 BusinessException
+   ↓
+GlobalExceptionHandler 捕获
+   ↓
+转成 ApiResponse { code: 4041, message: "...", data: null }
+   ↓
+HTTP 404 返回给前端
+```
 
 ### Week 8：JPA + 综合项目 v2
 
@@ -120,7 +145,7 @@ mvn -f phase6-springboot/pom.xml spring-boot:run
 - [ ] 能解释 `@RestController` vs 普通 `@Controller`
 - [ ] 能解释 `@Autowired` / IoC 是什么（看 BookController 构造器注入）
 - [ ] 图书借阅 REST API 可本地跑通
-- [ ] 能用 MockMvc 测一个 API
+- [x] 能用 MockMvc 测一个 API
 
 ### IoC / DI 速记
 

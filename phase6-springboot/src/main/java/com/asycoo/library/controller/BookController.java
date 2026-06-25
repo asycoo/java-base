@@ -4,6 +4,7 @@ import com.asycoo.library.dto.ApiResponse;
 import com.asycoo.library.dto.BookCreateRequest;
 import com.asycoo.library.model.Book;
 import com.asycoo.library.service.BookService;
+import jakarta.validation.Valid;
 import java.util.List;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -45,7 +46,7 @@ public class BookController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public ApiResponse<Book> create(@RequestBody BookCreateRequest request) {
+    public ApiResponse<Book> create(@Valid @RequestBody BookCreateRequest request) {
         return ApiResponse.ok(bookService.createBook(request));
     }
 
