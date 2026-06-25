@@ -1,8 +1,8 @@
 package com.asycoo.library.service;
 
 import com.asycoo.library.dto.BookCreateRequest;
+import com.asycoo.library.entity.Book;
 import com.asycoo.library.exception.BusinessException;
-import com.asycoo.library.model.Book;
 import com.asycoo.library.repository.BookRepository;
 import java.util.List;
 import org.springframework.stereotype.Service;
@@ -29,17 +29,17 @@ public class BookService {
     }
 
     public Book createBook(BookCreateRequest request) {
-        if (bookRepository.findById(request.id()).isPresent()) {
+        if (bookRepository.existsById(request.id())) {
             throw new BusinessException("BOOK_DUPLICATE", "图书 ID 已存在: " + request.id());
         }
         Book book = new Book(request.id(), request.title(), request.author(), request.price(), true);
-        bookRepository.save(book);
-        return book;
+        return bookRepository.save(book);
     }
 
     public void deleteBook(String id) {
-        if (!bookRepository.deleteById(id)) {
+        if (!bookRepository.existsById(id)) {
             throw new BusinessException("BOOK_NOT_FOUND", "图书不存在: " + id);
         }
+        bookRepository.deleteById(id);
     }
 }

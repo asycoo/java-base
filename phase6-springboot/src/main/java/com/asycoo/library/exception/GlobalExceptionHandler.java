@@ -18,8 +18,9 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(BusinessException.class)
     public ResponseEntity<ApiResponse<Void>> handleBusiness(BusinessException ex) {
         HttpStatus status = switch (ex.getErrorCode()) {
-            case "BOOK_NOT_FOUND" -> HttpStatus.NOT_FOUND;
+            case "BOOK_NOT_FOUND", "MEMBER_NOT_FOUND", "LOAN_NOT_FOUND" -> HttpStatus.NOT_FOUND;
             case "BOOK_DUPLICATE" -> HttpStatus.CONFLICT;
+            case "BOOK_NOT_AVAILABLE" -> HttpStatus.BAD_REQUEST;
             default -> HttpStatus.BAD_REQUEST;
         };
         return ResponseEntity.status(status)
@@ -60,6 +61,9 @@ public class GlobalExceptionHandler {
         return switch (errorCode) {
             case "BOOK_NOT_FOUND" -> 4041;
             case "BOOK_DUPLICATE" -> 4091;
+            case "BOOK_NOT_AVAILABLE" -> 4002;
+            case "MEMBER_NOT_FOUND" -> 4042;
+            case "LOAN_NOT_FOUND" -> 4043;
             case "VALIDATION_ERROR" -> 4001;
             default -> 5000;
         };

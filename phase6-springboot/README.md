@@ -123,10 +123,41 @@ HTTP 404 返回给前端
 
 ### Week 8：JPA + 综合项目 v2
 
-- H2 数据库 + `@Entity` Book / Loan
-- 借阅 / 归还 API
-- `@SpringBootTest` + `MockMvc` 集成测试
-- Springdoc API 文档
+| 顺序 | 文件 | 任务 |
+| --- | --- | --- |
+| 11 | [entity/Book.java](src/main/java/com/asycoo/library/entity/Book.java) | `@Entity` 图书 |
+| 12 | [entity/Loan.java](src/main/java/com/asycoo/library/entity/Loan.java) | `@Entity` 借阅记录 |
+| 13 | [LoanController.java](src/main/java/com/asycoo/library/controller/LoanController.java) | 借书 / 还书 API |
+| 14 | `BookRepository` | 内存 Map → Spring Data JPA |
+| 15 | Springdoc | 访问 `/swagger-ui.html` |
+
+**H2 控制台：** `http://localhost:8080/h2-console`（JDBC URL: `jdbc:h2:mem:library`）
+
+**借阅测试：**
+
+```bash
+# 借书
+curl -X POST http://localhost:8080/api/loans \
+  -H 'Content-Type: application/json' \
+  -d '{"bookId":"B001","memberId":"M001"}'
+
+# 在借列表
+curl http://localhost:8080/api/loans
+
+# 还书（返回 fine 逾期罚款）
+curl -X POST http://localhost:8080/api/loans/return \
+  -H 'Content-Type: application/json' \
+  -d '{"bookId":"B001","memberId":"M001"}'
+```
+
+**JPA 对照：**
+
+| Spring Data JPA | 前端类比 |
+| --- | --- |
+| `@Entity` | 数据库表结构定义 |
+| `JpaRepository` | ORM / Prisma client，不用手写 SQL |
+| `data.sql` | seed 初始数据 |
+| `@Transactional` | 事务：借书改两表，要么全成功要么全回滚 |
 
 ## 运行方式
 
@@ -144,7 +175,7 @@ mvn -f phase6-springboot/pom.xml spring-boot:run
 - [x] 能独立启动 Spring Boot，访问 `/api/hello`
 - [ ] 能解释 `@RestController` vs 普通 `@Controller`
 - [ ] 能解释 `@Autowired` / IoC 是什么（看 BookController 构造器注入）
-- [ ] 图书借阅 REST API 可本地跑通
+- [x] 图书借阅 REST API 可本地跑通
 - [x] 能用 MockMvc 测一个 API
 
 ### IoC / DI 速记

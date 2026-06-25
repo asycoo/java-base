@@ -2,7 +2,7 @@ package com.asycoo.library.controller;
 
 import com.asycoo.library.dto.ApiResponse;
 import com.asycoo.library.dto.BookCreateRequest;
-import com.asycoo.library.model.Book;
+import com.asycoo.library.entity.Book;
 import com.asycoo.library.service.BookService;
 import jakarta.validation.Valid;
 import java.util.List;
