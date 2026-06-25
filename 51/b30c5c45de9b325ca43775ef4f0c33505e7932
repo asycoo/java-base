@@ -1,0 +1,22 @@
+pom.xml
+  s_5e3b9530195b02::t_6d2f68ca3add58 120
+phase5-engineering/README.md
+  s_5e3b9530195b02::t_03e783ecb421f3 91-92
+  s_5e3b9530195b02::t_a3a77d7deae476 107-111
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.13",
+  "base_commit_sha": "51b30c5c45de9b325ca43775ef4f0c33505e7932",
+  "prompts": {},
+  "sessions": {
+    "s_5e3b9530195b02": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "58117788-224d-4cf1-9a9a-22c148ccaa9b",
+        "model": "default"
+      },
+      "human_author": "南辰 <yujiangnan@cai-inc.com>"
+    }
+  }
+}
