@@ -1,0 +1,50 @@
+phase5-engineering/phase5/patterns/observer/StockListener.java
+  s_5e3b9530195b02::t_a7ec144cb3674c 1-10
+phase5-engineering/phase5/patterns/template/DataExporter.java
+  s_5e3b9530195b02::t_e3eafc16859b65 1-29
+phase5-engineering/phase5/patterns/proxy/UserServiceImpl.java
+  s_5e3b9530195b02::t_1082b1ad75fd9f 1-10
+phase5-engineering/phase5/patterns/decorator/Notifier.java
+  s_5e3b9530195b02::t_8ccddc36fbb94e 1-7
+phase5-engineering/phase5/patterns/decorator/PrefixNotifier.java
+  s_5e3b9530195b02::t_8b9ed705d93c9b 1-23
+phase5-engineering/README.md
+  s_5e3b9530195b02::t_0012ac44807a70 57-74
+  s_5e3b9530195b02::t_c4fd6e20f55567 161-259
+phase5-engineering/phase5/patterns/proxy/UserServiceProxy.java
+  s_5e3b9530195b02::t_791b7bf9587a0a 1-26
+phase5-engineering/phase5/patterns/decorator/ConsoleNotifier.java
+  s_5e3b9530195b02::t_57f7961b7bf805 1-10
+phase5-engineering/phase5/patterns/template/CsvExporter.java
+  s_5e3b9530195b02::t_8f5b962960f230 1-20
+phase5-engineering/phase5/patterns/observer/OrderSubject.java
+  s_5e3b9530195b02::t_d04cc0f9acfa34 1-25
+phase5-engineering/phase5/patterns/observer/OrderListener.java
+  s_5e3b9530195b02::t_9f29aa877aef1f 1-7
+phase5-engineering/phase5/patterns/PatternsDemo.java
+  s_5e3b9530195b02::t_b2fe4164ee1888 1-88
+phase5-engineering/phase5/patterns/proxy/UserService.java
+  s_5e3b9530195b02::t_78ccd5ee397107 1-7
+phase5-engineering/phase5/patterns/singleton/AppConfig.java
+  s_5e3b9530195b02::t_d7a3f464027eee 1-22
+phase5-engineering/phase5/patterns/observer/SmsListener.java
+  s_5e3b9530195b02::t_8a52b74ea1334c 1-10
+phase5-engineering/phase5/patterns/template/JsonExporter.java
+  s_5e3b9530195b02::t_2f7356471135af 1-20
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.13",
+  "base_commit_sha": "75319851e4b3f40cf65160b86bf125770757c4ab",
+  "prompts": {},
+  "sessions": {
+    "s_5e3b9530195b02": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "58117788-224d-4cf1-9a9a-22c148ccaa9b",
+        "model": "default"
+      },
+      "human_author": "南辰 <yujiangnan@cai-inc.com>"
+    }
+  }
+}
