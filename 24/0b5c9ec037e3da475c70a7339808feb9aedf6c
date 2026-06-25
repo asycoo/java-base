@@ -1,0 +1,34 @@
+phase6-springboot/src/main/java/com/asycoo/library/LibraryApplication.java
+  s_5e3b9530195b02::t_d2e9ead3313574 1-12
+phase6-springboot/src/test/java/com/asycoo/library/HelloControllerTest.java
+  s_5e3b9530195b02::t_78eae07d271af3 1-26
+README.md
+  s_5e3b9530195b02::t_bdc526f88529bb 3
+  s_5e3b9530195b02::t_aa640188d2eeb0 45
+doc/Java完全掌握学习路线.md
+  s_5e3b9530195b02::t_b8de2249a479e9 575-576
+phase6-springboot/src/main/java/com/asycoo/library/controller/HelloController.java
+  s_5e3b9530195b02::t_344c431985ac07 1-24
+phase6-springboot/pom.xml
+  s_5e3b9530195b02::t_d369f6968470e8 1-44
+phase6-springboot/src/main/resources/application.yml
+  s_5e3b9530195b02::t_ce16fc75c250de 1-10
+phase6-springboot/README.md
+  s_5e3b9530195b02::t_75ec2c8bd90ab8 1-99
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.13",
+  "base_commit_sha": "240b5c9ec037e3da475c70a7339808feb9aedf6c",
+  "prompts": {},
+  "sessions": {
+    "s_5e3b9530195b02": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "58117788-224d-4cf1-9a9a-22c148ccaa9b",
+        "model": "default"
+      },
+      "human_author": "南辰 <yujiangnan@cai-inc.com>"
+    }
+  }
+}
