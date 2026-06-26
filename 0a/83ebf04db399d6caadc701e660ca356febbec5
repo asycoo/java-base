@@ -1,0 +1,109 @@
+phase6-springboot/src/main/java/com/asycoo/library/service/BookService.java
+  s_5e3b9530195b02::t_45ea0360c10324 8-9,18-19,26,36,45
+phase6-springboot/src/test/java/com/asycoo/library/AuthControllerTest.java
+  s_5e3b9530195b02::t_003025af899631 1-37
+phase6-springboot/src/main/java/com/asycoo/library/dto/LoginResponse.java
+  s_5e3b9530195b02::t_5913a2fd1c8538 1-6
+phase6-springboot/pom.xml
+  s_5e3b9530195b02::t_bdd82034563ffa 34-45
+  s_5e3b9530195b02::t_7193d39d8216e3 33,55-75
+phase6-springboot/src/main/java/com/asycoo/library/entity/Loan.java
+  s_5e3b9530195b02::t_d7a69a959b1f82 3,5,9-10,21-31,39-41,51-55,59-63
+phase6-springboot/src/test/java/com/asycoo/library/MemberControllerTest.java
+  s_5e3b9530195b02::t_95a96d0a5c7407 1-37
+phase6-springboot/README.md
+  s_5e3b9530195b02::t_b61fcd7348dc7e 201-228,230,232-243
+  s_5e3b9530195b02::t_99b1595bc54c1c 229,231
+  s_5e3b9530195b02::t_bf733dcc6ca1bc 162-200
+phase6-springboot/src/main/java/com/asycoo/library/repository/LoanRepository.java
+  s_5e3b9530195b02::t_97502c8c718c51 5-6,8,12-18,20-35
+phase6-springboot/src/main/java/com/asycoo/library/config/RedisCacheConfig.java
+  s_5e3b9530195b02::t_0990d0a23bdb50 1-29
+phase6-springboot/src/main/java/com/asycoo/library/controller/LoanController.java
+  s_5e3b9530195b02::t_778f812cff412b 9,15,20,22-24,37-41
+phase6-springboot/src/main/java/com/asycoo/library/security/MemberPrincipal.java
+  s_5e3b9530195b02::t_a20fed997a15cd 41-60
+  s_5e3b9530195b02::t_40b753221b2310 1-40,61
+phase6-springboot/src/main/java/com/asycoo/library/exception/GlobalExceptionHandler.java
+  s_5e3b9530195b02::t_ccf900d7d41281 64-65,67
+  s_5e3b9530195b02::t_ea4922cb22d1cf 22-23
+phase6-springboot/src/main/java/com/asycoo/library/security/JwtAuthFilter.java
+  s_5e3b9530195b02::t_c1105c70a7b785 1-49
+phase6-springboot/src/main/java/com/asycoo/library/security/SecurityProblemHandler.java
+  s_5e3b9530195b02::t_30188e8a8ecaed 1-41
+phase6-springboot/src/main/java/com/asycoo/library/dto/MemberCreateRequest.java
+  s_5e3b9530195b02::t_9b2f83de0cc96e 1-11
+phase6-springboot/src/test/java/com/asycoo/library/BookControllerTest.java
+  s_5e3b9530195b02::t_a5ba3352605a34 19
+  s_5e3b9530195b02::t_8c19324a40e655 8
+phase6-springboot/docker-compose.yml
+  s_5e3b9530195b02::t_7a8831db0be444 1-31
+phase6-springboot/src/main/java/com/asycoo/library/security/SecurityConfig.java
+  s_5e3b9530195b02::t_82a85096e64433 1-63
+phase6-springboot/src/main/java/com/asycoo/library/security/JwtService.java
+  s_5e3b9530195b02::t_eaa646baef37b4 1-9,11-57
+  s_5e3b9530195b02::t_cdc0eded108fb1 10
+phase6-springboot/src/main/java/com/asycoo/library/dto/MemberResponse.java
+  s_5e3b9530195b02::t_068b80f40a9932 1-6
+phase6-springboot/src/main/java/com/asycoo/library/dto/LoginRequest.java
+  s_5e3b9530195b02::t_c2b2de1b9de6a7 1-8
+phase6-springboot/src/main/java/com/asycoo/library/entity/Role.java
+  s_5e3b9530195b02::t_ce422ac3a239ba 1-6
+phase6-springboot/src/main/java/com/asycoo/library/entity/Member.java
+  s_5e3b9530195b02::t_3d4adda51a4952 3-4,6-7,19-27,31,34-36,46-61
+.github/workflows/ci.yml
+  s_5e3b9530195b02::t_4e71932a051391 1-23
+phase6-springboot/src/main/java/com/asycoo/library/security/MemberUserDetailsService.java
+  s_5e3b9530195b02::t_69b9fb7e6ba892 1-24
+phase6-springboot/src/main/java/com/asycoo/library/config/CacheConfig.java
+  s_5e3b9530195b02::t_24dd395a671f1a 1-9
+phase6-springboot/src/test/java/com/asycoo/library/LoanControllerTest.java
+  s_5e3b9530195b02::t_d086e0514a5164 19
+  s_5e3b9530195b02::t_501fcac076466e 83
+  s_5e3b9530195b02::t_e8da6b020691e6 8
+phase6-springboot/src/main/java/com/asycoo/library/service/LoanService.java
+  s_5e3b9530195b02::t_b9cb9af5e2c8db 65
+  s_5e3b9530195b02::t_0f2963d39e7516 7,14-16,37-43,54-55,60,67
+  s_5e3b9530195b02::t_d649cd63a61223 13
+  s_5e3b9530195b02::t_174d5af3f52558 47
+phase6-springboot/src/main/resources/data.sql
+  s_5e3b9530195b02::t_37101fc3878f56 6-8
+phase6-springboot/src/main/java/com/asycoo/library/controller/MemberController.java
+  s_5e3b9530195b02::t_2cb7e77811d2ba 1-37
+phase6-springboot/src/test/java/com/asycoo/library/HelloControllerTest.java
+  s_5e3b9530195b02::t_2a16c000c9f9b2 7
+  s_5e3b9530195b02::t_d179fba1332941 16
+phase6-springboot/src/main/java/com/asycoo/library/config/MemberPasswordInitializer.java
+  s_5e3b9530195b02::t_d7c647d084dac7 1-33
+phase6-springboot/src/main/java/com/asycoo/library/controller/AuthController.java
+  s_5e3b9530195b02::t_47d3ae389eacd8 1-37
+phase6-springboot/src/main/java/com/asycoo/library/service/MemberService.java
+  s_5e3b9530195b02::t_a4fe85901f482b 1-66
+phase6-springboot/src/main/java/com/asycoo/library/repository/MemberRepository.java
+  s_5e3b9530195b02::t_5097a475d5fb92 4,8-11
+phase6-springboot/src/main/resources/application.yml
+  s_5e3b9530195b02::t_db8221b8912831 39-43
+  s_5e3b9530195b02::t_36e915eacab60e 7-9,25-30
+phase6-springboot/src/test/resources/application.yml
+  s_5e3b9530195b02::t_feb04f3a23e752 19-23
+  s_5e3b9530195b02::t_469affae40adc1 1-18
+phase6-springboot/src/main/resources/application-docker.yml
+  s_5e3b9530195b02::t_9664bc3f27253f 1-2,6-27
+  s_5e3b9530195b02::t_2b7931443c0a3e 3-5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.1",
+  "base_commit_sha": "0a83ebf04db399d6caadc701e660ca356febbec5",
+  "prompts": {},
+  "sessions": {
+    "s_5e3b9530195b02": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "58117788-224d-4cf1-9a9a-22c148ccaa9b",
+        "model": "default"
+      },
+      "human_author": "南辰 <yujiangnan@cai-inc.com>"
+    }
+  }
+}
