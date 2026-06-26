@@ -1,23 +1,11 @@
-server:
-  port: 8080
-
+# 测试专用：H2 内存库 + 本地缓存，不依赖 Docker
 spring:
-  application:
-    name: library-api
-  threads:
-    virtual:
-      enabled: true
   datasource:
-    url: jdbc:h2:mem:library;DB_CLOSE_DELAY=-1
+    url: jdbc:h2:mem:test;DB_CLOSE_DELAY=-1
     driver-class-name: org.h2.Driver
-  h2:
-    console:
-      enabled: true
-      path: /h2-console
   jpa:
     hibernate:
       ddl-auto: create-drop
-    show-sql: true
     defer-datasource-initialization: true
   sql:
     init:
@@ -29,15 +17,7 @@ spring:
       - org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration
       - org.springframework.boot.autoconfigure.data.redis.RedisRepositoriesAutoConfiguration
 
-springdoc:
-  swagger-ui:
-    path: /swagger-ui.html
-
-logging:
-  level:
-    com.asycoo.library: INFO
-
 app:
   jwt:
-    secret: dev-only-change-me-256-bit-secret-key-1234567890
+    secret: test-only-change-me-256-bit-secret-key-1234567890
     expiration-ms: 86400000

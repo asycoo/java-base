@@ -6,21 +6,22 @@ import com.asycoo.library.dto.ReturnResponse;
 import com.asycoo.library.entity.Loan;
 import com.asycoo.library.service.LoanService;
 import jakarta.validation.Valid;
-import java.util.List;
+import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 借阅 API — 综合项目 v2
+ * 借阅 API
  *
- * POST /api/loans         借书
- * POST /api/loans/return  还书
- * GET  /api/loans         在借列表
+ * GET  /api/loans?page=0&size=10&active=true  分页列表
+ * POST /api/loans                              借书
+ * POST /api/loans/return                       还书
  */
 @RestController
 @RequestMapping("/api/loans")
@@ -33,8 +34,11 @@ public class LoanController {
     }
 
     @GetMapping
-    public ApiResponse<List<Loan>> listActive() {
-        return ApiResponse.ok(loanService.listActiveLoans());
+    public ApiResponse<Page<Loan>> list(
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size,
+            @RequestParam(defaultValue = "true") boolean active) {
+        return ApiResponse.ok(loanService.listLoans(page, size, active));
     }
 
     @PostMapping

@@ -159,6 +159,88 @@ curl -X POST http://localhost:8080/api/loans/return \
 | `data.sql` | seed 初始数据 |
 | `@Transactional` | 事务：借书改两表，要么全成功要么全回滚 |
 
+### 路径 A：JPA 关联 + 分页 + JWT
+
+| 顺序 | 文件 | 任务 |
+| --- | --- | --- |
+| 16 | [Loan.java](src/main/java/com/asycoo/library/entity/Loan.java) | `@ManyToOne` 关联 Book / Member |
+| 17 | [MemberController.java](src/main/java/com/asycoo/library/controller/MemberController.java) | 会员注册 |
+| 18 | [LoanController.java](src/main/java/com/asycoo/library/controller/LoanController.java) | 借阅记录分页 |
+| 19 | [AuthController.java](src/main/java/com/asycoo/library/controller/AuthController.java) | JWT 登录 |
+| 20 | [SecurityConfig.java](src/main/java/com/asycoo/library/security/SecurityConfig.java) | 保护图书增删 |
+
+**会员注册：**
+
+```bash
+curl -X POST http://localhost:8080/api/members \
+  -H 'Content-Type: application/json' \
+  -d '{"id":"M100","name":"王五","username":"wangwu","password":"123456"}'
+```
+
+**管理员登录（seed 用户 admin / 123456）：**
+
+```bash
+TOKEN=$(curl -s -X POST http://localhost:8080/api/auth/login \
+  -H 'Content-Type: application/json' \
+  -d '{"username":"admin","password":"123456"}' | jq -r '.data.token')
+
+# 带 token 新增图书（仅 ADMIN）
+curl -X POST http://localhost:8080/api/books \
+  -H "Authorization: Bearer $TOKEN" \
+  -H 'Content-Type: application/json' \
+  -d '{"id":"B200","title":"Spring实战","author":"Craig","price":99}'
+```
+
+**借阅分页：**
+
+```bash
+curl 'http://localhost:8080/api/loans?page=0&size=10&active=true'
+# 响应 data.content 为列表，data.totalElements 为总数
+```
+
+### 路径 B：Docker + Redis + CI（进阶）
+
+| 组件 | 文件 | 说明 |
+| --- | --- | --- |
+| Docker Compose | [docker-compose.yml](docker-compose.yml) | MySQL 8.4 + Redis 7 |
+| docker profile | [application-docker.yml](src/main/resources/application-docker.yml) | 连 MySQL/Redis |
+| Redis 缓存 | [BookService.java](src/main/java/com/asycoo/library/service/BookService.java) | `@Cacheable` 图书列表 |
+| 虚拟线程 | `application.yml` | Java 21 `spring.threads.virtual.enabled` |
+| GitHub Actions | [.github/workflows/ci.yml](../.github/workflows/ci.yml) | push 自动跑测试 |
+
+**一键启动基础设施：**
+
+```bash
+cd phase6-springboot
+docker compose up -d          # 启动 MySQL + Redis
+docker compose ps             # 确认 healthy
+
+# 用 docker profile 启动应用
+mvn spring-boot:run -Dspring-boot.run.profiles=docker
+```
+
+**验证 Redis 缓存（docker profile 下）：**
+
+```bash
+# 第一次查库，第二次走 Redis 缓存（日志无 SQL）
+curl http://localhost:8080/api/books
+curl http://localhost:8080/api/books
+
+# 新增图书会 @CacheEvict 清缓存（需 ADMIN token，见路径 A）
+curl -X POST http://localhost:8080/api/books \
+  -H "Authorization: Bearer $TOKEN" \
+  -H 'Content-Type: application/json' \
+  -d '{"id":"B200","title":"Redis实战","author":"Huang","price":88}'
+```
+
+**Profile 对照：**
+
+| Profile | 数据库 | 缓存 | 场景 |
+| --- | --- | --- | --- |
+| 默认（无 profile） | H2 内存 | Simple 本地 | 本地快速开发 |
+| `docker` | MySQL | Redis | 接近生产环境 |
+| 测试 | H2 内存 | Simple 本地 | `mvn test` / CI |
+
 ## 运行方式
 
 ```bash
